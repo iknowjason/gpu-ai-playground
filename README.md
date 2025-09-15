@@ -103,11 +103,11 @@ terraform output
 
 Once the deployment is complete, use the values from the ```terraform output``` command to access the services.
 
-- n8n Admin Console: https://<your-instance-public-dns>
+- n8n Admin Console: https://PUBLIC_IP
 
-- Open WebUI Console: http://<your-instance-public-dns>:8443
+- Open WebUI Console: http://PUBLIC_IP:8443
 
-- SSH Access: ssh -i ssh_key.pem ubuntu@<your-instance-public-ip>
+- SSH Access: ssh -i ssh_key.pem ubuntu@PUBLIC_IP
 
 ## Monitoring the Bootstrap Process
 
