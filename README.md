@@ -19,7 +19,7 @@ The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https
 This repository automates the provisioning of an AWS GPU environment suitable for AI development and testing. Using Terraform, it creates an isolated AWS lab including a GPU EC2 instance (with an NVIDIA GPU), networking components, and any supporting resources. On launch, the instance is auto-configured (via cloud-init user-data) with GPU drivers, workflow tools (n8n), and an AI management (Ollama, Open WebUI). The GPU AI Playground is ideal for those who want to quickly spin up a personal AI sandbox in the cloud without manually installing CUDA, frameworks, and tooling.
 
 ## Estimated Cost
-**Disclaimer:"" Deploying this playground will incur AWS charges on your account. The primary cost is the GPU EC2 instance, which on-demand can be roughly $0.50–$0.70 per hour (depending on instance type and region). For example, a g4dn.xlarge is about $0.526 per hour in US East (Ohio) region
+**Disclaimer:** Deploying this playground will incur AWS charges on your account. The primary cost is the GPU EC2 instance, which on-demand can be roughly $0.50–$0.70 per hour (depending on instance type and region). For example, a g4dn.xlarge is about $0.526 per hour in US East (Ohio) region
 instances.vantage.sh
  (approximately $380 per month if run 24/7). Storage costs for the 100 GB volume are minor in comparison (around $10 per month for gp2/gp3 at $0.10 per GB-month
 github.com
