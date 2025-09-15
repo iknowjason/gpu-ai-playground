@@ -6,7 +6,7 @@ This repository provides a Terraform template to rapidly deploy a complete, GPU-
 
 The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https://github.com/iknowjason/self-hosted-ai-starter-kit) integated with Cisco's [Foundation-Sec-8B-Instruct](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Instruct), an open-weight, 8-billion parameter instruction-tuned language model specialized for cybersecurity applications.
 
-* **GPU-Accelerated EC2 Instance**: A powerful Ubuntu 22.04 server ready for AI workloads.
+* **GPU-Accelerated EC2 Instance**: An Ubuntu 22.04 server ready for AI workloads.
 * **NVIDIA & Docker Stack**: Installs NVIDIA drivers, the NVIDIA Container Toolkit, and configures Docker to leverage the GPU.
 * **Multiple Inference Endpoints**:
     * **Ollama**: Manages and serves the LLM.
