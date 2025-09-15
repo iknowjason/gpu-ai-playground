@@ -134,19 +134,19 @@ The bootstrap process creates several test scripts in /home/ubuntu/test_inferenc
 
 1. Open WebUI API:
 
-        Log in to the Open WebUI Console and create an API key in the settings.
+Log in to the Open WebUI Console and create an API key in the settings.
 
-        Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with your new API key.
+Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with your new API key.
 
-        Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
+Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
 
 2. PyTorch FastAPI API:
 
-    The API key is generated randomly during setup. SSH into the server to retrieve it:
-   ```
-   grep FOUNDATION_API_KEY /home/ubuntu/foundation_server/.env
-   ```
-   Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with the key you just retrieved.
+The API key is generated randomly during setup. SSH into the server to retrieve it:
+```
+grep FOUNDATION_API_KEY /home/ubuntu/foundation_server/.env
+```
+Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with the key you just retrieved.
 
 Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
 
