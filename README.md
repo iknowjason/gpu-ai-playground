@@ -1,4 +1,4 @@
-# GPU AI Playground - a Private LLM inference and model hosting research playground
+# GPU AI Playground
 
 ## Overview
 
