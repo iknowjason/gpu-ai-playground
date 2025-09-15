@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository provides a Terraform template to rapidly deploy a complete, GPU-powered AI environment in AWS. It's designed to bootstrap a server with all the necessary components to run local Large Language Models (LLMs), including the container runtime, NVIDIA drivers, inference servers, and a pre-loaded security-focused AI model.
+This repository provides a Terraform template to rapidly deploy a complete, GPU-powered AI environment in AWS. It's designed to bootstrap a server with all the necessary components to run local Large Language Models (LLMs), including the container runtime, NVIDIA drivers, inference servers, and a pre-loaded Cyber Security .
 
-The environment automatically deploys the [Self-Hosted AI Starter Kit](https://github.com/iknowjason/self-hosted-ai-starter-kit) and sets up the following key resources:
+The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https://github.com/iknowjason/self-hosted-ai-starter-kit) and Cisco's [Foundation-Sec-8B-Instruct](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Instruct), an open-weight, 8-billion parameter instruction-tuned language model specialized for cybersecurity applications.
 
 * **GPU-Accelerated EC2 Instance**: A powerful Ubuntu 22.04 server ready for AI workloads.
 * **NVIDIA & Docker Stack**: Installs NVIDIA drivers, the NVIDIA Container Toolkit, and configures Docker to leverage the GPU.
@@ -12,7 +12,7 @@ The environment automatically deploys the [Self-Hosted AI Starter Kit](https://g
     * **Ollama**: Manages and serves the LLM.
     * **Open WebUI**: Provides a user-friendly, ChatGPT-like interface for interacting with the model.
     * **PyTorch/FastAPI Server**: A native Python-based inference API for high-performance programmatic access.
-* **Pre-loaded AI Model**: Automatically downloads and configures the `Mungert/Foundation-Sec-8B-Instruct-GGUF` model from Hugging Face.
+* **Pre-loaded Quantized AI Cyber Security Model**: Automatically downloads and configures the `Mungert/Foundation-Sec-8B-Instruct-GGUF` model from Hugging Face.
 * **Automated HTTPS**: Caddy is used as a reverse proxy to provide secure HTTPS access to the web interfaces.
 
 ***
