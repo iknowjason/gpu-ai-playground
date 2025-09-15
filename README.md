@@ -32,8 +32,7 @@ This repository automates the provisioning of an AWS GPU environment suitable fo
 
 Run the environment only when needed. Use terraform destroy to tear it down when not in use, and spin it up again later (note that any data on the instance will be lost unless you save it externally).
 
-Consider using a smaller or cheaper instance if appropriate. AWS offers newer GPU instance types or spot instances at lower prices (spot can be 50-70% cheaper
-instances but can be interrupted).
+Consider using a smaller or cheaper instance if appropriate. AWS offers GPU instance types or spot instances at lower prices.
 
 Monitor your AWS billing dashboard. Terraform outputs the instance ID and other info; you can use AWS Cost Explorer to see running costs in near-real time.
 
