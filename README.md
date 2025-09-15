@@ -120,8 +120,10 @@ You can also check the status of the PyTorch FastAPI server to ensure it's runni
 ```
 sudo systemctl status foundation
 ```
-# You should see it listening on port 9000
+Verify that the PyTorch FastAPI server is listening on port 9000:
+```
 sudo netstat -tulpn | grep 9000
+```
 
 ## API Usage and Testing
 
