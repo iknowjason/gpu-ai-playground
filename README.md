@@ -19,26 +19,22 @@ The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https
 This repository automates the provisioning of an AWS GPU environment suitable for AI development and testing. Using Terraform, it creates an isolated AWS lab including a GPU EC2 instance (with an NVIDIA GPU), networking components, and any supporting resources. On launch, the instance is auto-configured (via cloud-init user-data) with GPU drivers, workflow automation tools (n8n), and AI management frameworks (Ollama, Open WebUI). The GPU AI Playground is ideal for those who want to quickly spin up a personal AI sandbox in the cloud without manually installing CUDA, frameworks, and tooling.
 
 ## Estimated Cost
-**Disclaimer:** Deploying this playground will incur AWS charges on your account. The primary cost is the GPU EC2 instance, which on-demand can be roughly $0.50–$0.70 per hour (depending on instance type and region). For example, a g4dn.xlarge is about $0.526 per hour in US East (Ohio) region
-instances.vantage.sh
- (approximately $380 per month if run 24/7). Storage costs for the 100 GB volume are minor in comparison (around $10 per month for gp2/gp3 at $0.10 per GB-month
-github.com
-). There is also a small cost for the S3 bucket if large files are stored (few cents per GB-month) and data transfer fees if downloading big models from S3.
+**Disclaimer:** Deploying this playground will incur AWS charges on your account. The primary cost is the GPU EC2 instance.  The cost of the default ```g5.2xlarge``` instance is $1.212 per hour for On-Demand usage. Based on my research and testing this is the most cost effective and minimal hardware for running a GPU instance with an 8 billion parameter model such as Cisco's Foundation-Sec-8b-Instruct model with both native PyTorch FastAPI inference server as well as Quantized f16 model hosted through Ollama.
+
+Check the AWS Pricing page to confirm the latest pricing.
 
 To manage costs:
 
 Run the environment only when needed. Use terraform destroy to tear it down when not in use, and spin it up again later (note that any data on the instance will be lost unless you save it externally).
 
-Consider using a smaller or cheaper instance if appropriate. AWS offers newer GPU instance types (like g5) or spot instances at lower prices (spot can be 50-70% cheaper
-instances.vantage.sh
- but can be interrupted).
+Consider using a smaller or cheaper instance if appropriate. AWS offers newer GPU instance types or spot instances at lower prices (spot can be 50-70% cheaper
+instances but can be interrupted).
 
 Monitor your AWS billing dashboard. Terraform outputs the instance ID and other info; you can use AWS Cost Explorer to see running costs in near-real time
 github.com
 .
 
 For a precise estimate tailored to your region and usage, use the AWS Pricing Calculator
-github.com
  – input the EC2 instance type, EBS volume size, and duration you expect to run the lab to calculate the cost. Always remember to shut down the environment to stop charges.
 
 ## Requirements and Setup
