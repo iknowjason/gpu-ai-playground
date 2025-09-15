@@ -13,6 +13,7 @@ The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https
     * **Open WebUI**: Provides a user-friendly, ChatGPT-like interface for interacting with the model.
     * **PyTorch/FastAPI Server**: A native Python-based inference API for high-performance programmatic access.
 * **Pre-loaded Quantized AI Cyber Security Model**: Automatically downloads and configures the `Mungert/Foundation-Sec-8B-Instruct-GGUF` model from Hugging Face.
+* **Foundation Instruct Model with Native Pytorch Inference:** Downloads and runs the Foundation-Sec-8B-Instruct model for better inference performance using a FastAPI exposed endpoint.
 * **Automated HTTPS**: Caddy is used as a reverse proxy to provide secure HTTPS access to the web interfaces.
 
 ## About
