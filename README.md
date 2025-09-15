@@ -191,6 +191,7 @@ http://XX.XX.XX.XX:8443/api/chat/completions
 CONFIGURATION
 ```
 
+
 # License
 This project is licensed under the MIT License, which allows for reuse and modification with attribution. See the LICENSE file for details. All included third-party tools and libraries maintain their respective licenses. Enjoy your AI playground responsibly!
 
