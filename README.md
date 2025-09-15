@@ -1,8 +1,8 @@
-# GPU AI Playground
+# GPU AI Playground - a Private LLM inference and model hosting research playground
 
 ## Overview
 
-This repository provides a Terraform template to rapidly deploy a complete, GPU-powered AI environment in AWS. It's designed to bootstrap a server with all the necessary components to run local Large Language Models (LLMs), including the container runtime, NVIDIA drivers, inference servers, and a pre-loaded Cyber Security language model.
+This repository provides a Terraform template to rapidly deploy a complete, GPU-powered AI environment in AWS. It's designed to bootstrap a server with all the necessary components to run local Large Language Models (LLMs), including the container runtime, NVIDIA drivers, private inference server with endpoints, and a pre-loaded Cyber Security language model.
 
 The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https://github.com/iknowjason/self-hosted-ai-starter-kit) and Cisco's [Foundation-Sec-8B-Instruct](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Instruct), an open-weight, 8-billion parameter instruction-tuned language model specialized for cybersecurity applications.
 
