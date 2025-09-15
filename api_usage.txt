@@ -1,0 +1,20 @@
+INFERENCE BASIC TESTS (Localhost)
+------------------------------------
+1. SSH into the system
+2. Run Ollama Test: /home/ubuntu/test_inference_scripts/ollama_test.sh
+3. Run Open WebUI Test: /home/ubuntu/test_inference_scripts/openwebui_test.sh
+4. Run PyTorch FastAPI Test: /home/ubuntu/test_inference_scripts/pytorch_test.sh
+
+INFERENCE BASIC TESTS (Remote)
+------------------------------------
+Open WebUI:
+1. OpenWebUI - First login to Open WebUI console, create an API Key
+2. On your system you want to remotely invoke the API from: place the API key into script/openwebui_test.sh, OPENWEB_API_KEY value
+3. Run the script: test_inference_scripts/openwebui_test.sh
+
+Pytorch FastAPI:
+1. Get the Foundation API Key
+1a. SSH into the system 
+1b. Run at a bash prompt:  grep FOUNDATION_API_KEY /home/ubuntu/foundation_server/.env
+2. Place the API key into script/pytorch_test.sh, PYTORCH_API_KEY
+3. Run the script: test_inference_scripts/pytorch_test.sh
