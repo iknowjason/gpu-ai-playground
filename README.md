@@ -16,7 +16,7 @@ The environment automatically deploys the [n8n Self-Hosted AI Starter Kit](https
 * **Automated HTTPS**: Caddy is used as a reverse proxy to provide secure HTTPS access to the web interfaces.
 
 ## About
-This repository automates the provisioning of an AWS GPU environment suitable for AI development and testing. Using Terraform, it creates an isolated AWS lab including a GPU EC2 instance (with an NVIDIA GPU), networking components, and any supporting resources. On launch, the instance is auto-configured (via cloud-init user-data) with GPU drivers and AI software so that you can immediately start running AI workloads (e.g., a Stable Diffusion web UI for image generation, Jupyter notebooks for ML experiments, or other AI model servers). The GPU AI Playground is ideal for those who want to quickly spin up a personal AI sandbox in the cloud without manually installing CUDA, frameworks, and tooling.
+This repository automates the provisioning of an AWS GPU environment suitable for AI development and testing. Using Terraform, it creates an isolated AWS lab including a GPU EC2 instance (with an NVIDIA GPU), networking components, and any supporting resources. On launch, the instance is auto-configured (via cloud-init user-data) with GPU drivers, workflow tools (n8n), and an AI management (Ollama, Open WebUI). The GPU AI Playground is ideal for those who want to quickly spin up a personal AI sandbox in the cloud without manually installing CUDA, frameworks, and tooling.
 
 ## Requirements and Setup
 
