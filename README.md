@@ -22,13 +22,11 @@ This repository automates the provisioning of an AWS GPU environment suitable fo
 ## Estimated Cost
 **Disclaimer:** Deploying this playground will incur AWS charges on your account. The primary cost is the GPU EC2 instance.  This playground uses Amazon EC2 [G5 instances](https://aws.amazon.com/ec2/instance-types/g5/).  This can be customized in [variables.tf](https://github.com/iknowjason/gpu-ai-playground/blob/main/variables.tf#L12).   The cost of the default ```g5.2xlarge``` instance is $1.212 per hour for On-Demand usage. Based on my research and testing this is the most cost effective and minimal hardware for running a GPU instance with an 8 billion parameter model such as [Cisco's Foundation-Sec-8b-Instruct](https://huggingface.co/fdtn-ai/Foundation-Sec-8B-Instruct) model with both native PyTorch FastAPI inference server as well as Quantized f16 model hosted through Ollama.
 
-**Instance Information**
+**Instance Information:**  Check the AWS Pricing page to confirm the latest pricing.
 | Instance Family | Instance Size | Hourly Cost | vCPU | Memory | GPU Memory |
 | :------- | :------: | -------: | -------: | -------: | -------: |  
 | G5 | 5x.2xlarge | $1.212 | 8 | 32 | 24 |
 
-
-Check the AWS Pricing page to confirm the latest pricing.
 
 **To manage costs:**
 
