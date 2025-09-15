@@ -23,7 +23,7 @@ This repository automates the provisioning of an AWS GPU environment suitable fo
 
 Check the AWS Pricing page to confirm the latest pricing.
 
-To manage costs:
+**To manage costs:**
 
 Run the environment only when needed. Use terraform destroy to tear it down when not in use, and spin it up again later (note that any data on the instance will be lost unless you save it externally).
 
