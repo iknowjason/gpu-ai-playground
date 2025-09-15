@@ -96,4 +96,98 @@ The lab has been created with important terraform outputs showing services, endp
 terraform output
 ```
 
+# Details and Usage
+
+## Accessing the Services
+
+Once the deployment is complete, use the values from the ```terraform output``` command to access the services.
+
+    n8n Admin Console: https://<your-instance-public-dns>
+
+    Open WebUI Console: http://<your-instance-public-dns>:8443
+
+    SSH Access: ssh -i ssh_key.pem ubuntu@<your-instance-public-ip>
+
+## Monitoring the Bootstrap Process
+
+The user_data.sh script handles the entire setup process. You can monitor its progress by SSHing into the instance and tailing the log file. The setup is complete when you see "End of bootstrap script".
+```
+# SSH into the server first
+tail -f /var/log/cloud-init-output.log
+```
+
+You can also check the status of the PyTorch FastAPI server to ensure it's running:
+```
+sudo systemctl status foundation
+```
+# You should see it listening on port 9000
+sudo netstat -tulpn | grep 9000
+
+## API Usage and Testing
+
+The bootstrap process creates several test scripts in /home/ubuntu/test_inference_scripts/ on the server. Additionally, api_usage.txt provides instructions for remote testing.
+
+### Remote Testing
+
+1. Open WebUI API:
+
+        Log in to the Open WebUI Console and create an API key in the settings.
+
+        Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with your new API key.
+
+        Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
+
+2. PyTorch FastAPI API:
+
+    The API key is generated randomly during setup. SSH into the server to retrieve it:
+   ```
+   grep FOUNDATION_API_KEY /home/ubuntu/foundation_server/.env
+   ```
+   Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with the key you just retrieved.
+
+Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
+
+3. Example Terraform Output
+
+After a successful deployment, your output will look similar to this:
+```
+n8n_server_details = <<CONFIGURATION
+-----------------
+GPU Linux Server
+-----------------
+
+n8n Admin Console
+-------------
+[https://ec2-XX-XX-XX-XX.compute-1.amazonaws.com](https://ec2-XX-XX-XX-XX.compute-1.amazonaws.com)
+
+Open WebUI Console
+------------------
+[http://ec2-XX-XX-XX-XX.compute-1.amazonaws.com:8443](http://ec2-XX-XX-XX-XX.compute-1.amazonaws.com:8443)
+
+SSH
+---
+ssh -i ssh_key.pem ubuntu@XX.XX.XX.XX
+
+BOOTSTRAP MONITORING
+--------------------
+1. SSH into the system (command above)
+2. Tail the cloudinit logfile (Wait for it to output 'End of bootstrap script')
+tail -f /var/log/cloud-init-output.log
+3. Check the PyTorch API service (Wait for it to be listening on port 9000)
+sudo systemctl status foundation
+sudo netstat -tulpn | grep 9000
+
+Remote Inference APIs (see api_usage.txt for how to use them)
+------------------------------------------------------------
+PyTorch FastAPI:
+http://XX.XX.XX.XX:9443/generate
+
+Open WebUI:
+http://XX.XX.XX.XX:8443/api/chat/completions
+
+CONFIGURATION
+```
+
+# License
+This project is licensed under the MIT License, which allows for reuse and modification with attribution. See the LICENSE file for details. All included third-party tools and libraries maintain their respective licenses. Enjoy your AI playground responsibly!
 
