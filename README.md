@@ -42,17 +42,59 @@ For a precise estimate tailored to your region and usage, use the AWS Pricing Ca
 
 ## Requirements and Setup
 
-**Prerequisites:**
+## Screen Shots
+[Some examples.](examples.md)
 
-* An **AWS Account** with programmatic access keys configured.
-* **Terraform** (`~>1.5`) installed on your local machine.
-* **AWS CLI** installed and configured with your credentials.
+## Requirements and Setup
 
-***
+**Tested with:**
+
+* Mac OS 13.4 or Ubuntu 22.04
+* terraform 1.5.7
+
+**Clone this repository:**
+```
+git clone https://github.com/iknowjason/gpu-ai-playground
+cd gpu-ai-playground
+```
+
+**Credentials Setup:**
+
+Generate an IAM programmatic access key that has permissions to build resources in your AWS account.  Setup your .env to load these environment variables.  You can also use the direnv tool to hook into your shell and populate the .envrc.  Should look something like this in your .env or .envrc:
+
+```
+export AWS_ACCESS_KEY_ID="VALUE"
+export AWS_SECRET_ACCESS_KEY="VALUE"
+```
 
 ## Build and Destroy Resources
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/iknowjason/gpu-ai-playground.git
-cd gpu-ai-playground
+### Run terraform init
+Change into the ```gpu-ai-playground``` working directory and type:
+
+```
+terraform init
+```
+
+### Run terraform plan or apply
+```
+terraform apply -auto-approve
+```
+or
+```
+terraform plan -out=run.plan
+terraform apply run.plan
+```
+
+### Destroy resources
+```
+terraform destroy -auto-approve
+```
+
+### View terraform created resources
+The lab has been created with important terraform outputs showing services, endpoints, IP addresses, and credentials.  To view them:
+```
+terraform output
+```
+
+
