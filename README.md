@@ -52,5 +52,5 @@ For a precise estimate tailored to your region and usage, use the AWS Pricing Ca
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/iknowjason/gpu-ai-playground.git](https://github.com/iknowjason/gpu-ai-playground.git)
+git clone https://github.com/iknowjason/gpu-ai-playground.git
 cd gpu-ai-playground
