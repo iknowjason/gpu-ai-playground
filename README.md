@@ -51,6 +51,7 @@ For a precise estimate tailored to your region and usage, use the AWS Pricing Ca
 
 * Mac OS 13.4 or Ubuntu 22.04
 * terraform 1.5.7
+* AWS Service Limits: Ensure your AWS account can launch GPU instances in the chosen region. New accounts may need limit increases for GPU instance types.
 
 **Clone this repository:**
 ```
