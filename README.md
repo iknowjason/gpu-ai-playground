@@ -151,22 +151,17 @@ Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
 
 After a successful deployment, your output will look similar to this:
 ```
-n8n_server_details = <<CONFIGURATION
------------------
-GPU Linux Server
------------------
-
 n8n Admin Console
 -------------
-[https://ec2-XX-XX-XX-XX.compute-1.amazonaws.com](https://ec2-XX-XX-XX-XX.compute-1.amazonaws.com)
+https://ec2-44-220-87-247.compute-1.amazonaws.com
 
 Open WebUI Console
 ------------------
-[http://ec2-XX-XX-XX-XX.compute-1.amazonaws.com:8443](http://ec2-XX-XX-XX-XX.compute-1.amazonaws.com:8443)
+http://ec2-44-220-87-247.compute-1.amazonaws.com:8443
 
 SSH
 ---
-ssh -i ssh_key.pem ubuntu@XX.XX.XX.XX
+ssh -i ssh_key.pem ubuntu@44.220.87.247
 
 BOOTSTRAP MONITORING
 --------------------
@@ -180,12 +175,10 @@ sudo netstat -tulpn | grep 9000
 Remote Inference APIs (see api_usage.txt for how to use them)
 ------------------------------------------------------------
 PyTorch FastAPI:
-http://XX.XX.XX.XX:9443/generate
+http://44.220.87.247:9443/generate
 
 Open WebUI:
-http://XX.XX.XX.XX:8443/api/chat/completions
-
-CONFIGURATION
+http://44.220.87.247:8443/api/chat/completions
 ```
 
 
