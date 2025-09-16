@@ -64,8 +64,6 @@ export AWS_ACCESS_KEY_ID="VALUE"
 export AWS_SECRET_ACCESS_KEY="VALUE"
 ```
 
-## Build and Destroy Resources
-
 ### Run terraform init
 Change into the ```gpu-ai-playground``` working directory and type:
 
