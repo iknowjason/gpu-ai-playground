@@ -1,11 +1,12 @@
 # Example Images
 
 ### Accessing n8n
-The n8n web application is accessed through a Caddy reverse https proxy listening on port 443.
-![n8n](images/ss1.png "GHOSTS API")
+The n8n web application is accessed through a Caddy reverse https proxy listening on port 443.  See terraform output for information on your endpoint.  
+![n8n](images/ss1.png "n8n")
 
-### Description 2
-![GHOSTS API](images/ss2.png "GHOSTS API")
+### Open WebUI
+The Open WebUI console is accessed with http on port 8443.  The following image shows a chat window with the Foundation-sec-8b-instrut model.  It is nice to manage 8b parameter models under your control for application development.  See terraform output for information on your endpoint.  
+![Open WebUI](images/ss2.png "Open WebUI")
 
 ### Description 3
 ![GHOSTS API](images/ss3.png "GHOSTS API")
