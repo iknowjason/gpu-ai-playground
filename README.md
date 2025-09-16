@@ -129,21 +129,25 @@ The bootstrap process creates several test scripts in /home/ubuntu/test_inferenc
 
 ### Open WebUI API Testing
 
-Log in to the Open WebUI Console and create an API key in the settings.
+An OpenAI compatible API endpoint is exposed and ready for chat completions.  It has an authorization layer by default protecting it.  The API is accessible remotely or locally by SSH'ing into the system.  See the output from ```terraform output``` or ```api_usage.txt``` for more information.  
 
-Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with your new API key.
+1. To set up an API key, log in to the Open WebUI Console and create an API key in the settings.  
 
-Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
+2. Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with your new API key.
+
+3. Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
 
 ### PyTorch FastAPI API Testing
 
-The API key is generated randomly during setup. SSH into the server to retrieve it:
+An OpenAI comptible PyTorch FastAPI is exposed for remote or local testing.  The API key is generated randomly during setup. See the output from ```terraform output``` or ```api_usage.txt``` for more information. 
+
+1. SSH into the server to retrieve it the API key.
 ```
 grep FOUNDATION_API_KEY /home/ubuntu/foundation_server/.env
 ```
-Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with the key you just retrieved.
+2. Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit this file and replace the CHANGE_BEFORE_FIRST_USING placeholder with the key you just retrieved.
 
-Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
+3. Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
 
 ### Example Terraform Output
 
