@@ -1,7 +1,8 @@
 # Example Images
 
-### Description 1
-![GHOSTS API](images/ss1.png "GHOSTS API")
+### Accessing n8n
+The n8n web application is accessed through a Caddy reverse https proxy listening on port 443.
+![n8n](images/ss1.png "GHOSTS API")
 
 ### Description 2
 ![GHOSTS API](images/ss2.png "GHOSTS API")
