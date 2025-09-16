@@ -5,7 +5,7 @@ curl -X POST http://${public_ip}:8443/api/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENWEB_API_KEY" \
   -d '{
-    "model": "foundation-sec-8b:latest",
+    "model": "foundation-sec-8b-instruct:latest",
     "messages": [
       {
         "role": "user",

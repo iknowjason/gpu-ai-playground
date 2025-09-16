@@ -191,7 +191,7 @@ echo "Waiting for ollama container to be healthy"
 sleep 30
 echo "Preload the foundation-sec-8b container into ollama"
 docker exec -w /models/Foundation-Sec-8B-Instruct-GGUF ollama \
-  ollama create foundation-sec-8b -f Modelfile
+  ollama create foundation-sec-8b-instruct -f Modelfile
 
 # Install FastAPI native inference server with Authorization Checks 
 echo "Setting up FastAPI server for Cisco Foundation model"
