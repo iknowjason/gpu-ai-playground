@@ -132,7 +132,7 @@ The bootstrap process creates several test scripts in /home/ubuntu/test_inferenc
 
 ### Remote Testing
 
-1. Open WebUI API:
+### Open WebUI API Testing
 
 Log in to the Open WebUI Console and create an API key in the settings.
 
@@ -140,7 +140,7 @@ Terraform creates a test script for you at ./test-inference-scripts/openwebui.sh
 
 Run the script from your local machine: bash ./test-inference-scripts/openwebui.sh
 
-2. PyTorch FastAPI API:
+### PyTorch FastAPI API Testing
 
 The API key is generated randomly during setup. SSH into the server to retrieve it:
 ```
@@ -150,7 +150,7 @@ Terraform creates a test script at ./test-inference-scripts/pytorch.sh. Edit thi
 
 Run the script from your local machine: bash ./test-inference-scripts/pytorch.sh
 
-3. Example Terraform Output
+### Example Terraform Output
 
 After a successful deployment, your output will look similar to this:
 ```
