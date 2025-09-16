@@ -1,0 +1,6 @@
+.env*
+.terraform.lock.hcl
+.terraform/
+ssh_key.pem
+terraform.tfstate
+test-inference-scripts/

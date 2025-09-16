@@ -8,7 +8,6 @@ variable "aws_region" {
 variable "instance_type" {
   description = "The EC2 instance type for the GPU node."
   type        = string
-  #default     = "g4dn.xlarge"
   default     = "g5.2xlarge"
 }
 
