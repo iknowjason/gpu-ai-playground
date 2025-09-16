@@ -12,9 +12,9 @@ The Open WebUI console is accessed with http on port 8443.  The following image 
 This image shows running a remote bash script against the Pytorch FastAPI server using an OpenAI API compatible request.  The remote inference API is exposed on port 9443.  The Caddy proxy re-directs traffic to TCP port 9000.
 ![pytorch](images/ss3.png "pytorch")
 
-### Description 4
-SSH into the GHOSTS Linux server and run the script: ```/home/ubuntu/npc.sh```
-![GHOSTS API](images/ss4.png "GHOSTS API")
+### Open WebUI Inference Endpoint API
+This image shows running a remote bash script against the Open WebUI API server using an OpenAI API compatible request.  The remote inference API is exposed on port 8443.  The Open WebUI has API key management in the console.  You first need to add a new API key and paste the value into the script.
+![Open WebUI API](images/ss4.png "Open WebUI ApI")
 
 
 
