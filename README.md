@@ -25,7 +25,7 @@ This repository automates the provisioning of an AWS GPU environment suitable fo
 **Instance Information:**  Check the AWS Pricing page to confirm the latest pricing.
 | Instance Family | Instance Size | Hourly Cost | vCPU | Memory | GPU Memory |
 | :------- | :------: | -------: | -------: | -------: | -------: |  
-| G5 | 5x.2xlarge | $1.212 | 8 | 32 | 24 |
+| G5 | G5.2xlarge | $1.212 | 8 | 32 | 24 |
 
 
 **To manage costs:**
