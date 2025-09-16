@@ -38,8 +38,6 @@ Monitor your AWS billing dashboard. Terraform outputs the instance ID and other 
 For a precise estimate tailored to your region and usage, use the AWS Pricing Calculator
  – input the EC2 instance type, EBS volume size, and duration you expect to run the lab to calculate the cost. Always remember to shut down the environment to stop charges.
 
-## Requirements and Setup
-
 ## Screen Shots
 [Some examples.](examples.md)
 
