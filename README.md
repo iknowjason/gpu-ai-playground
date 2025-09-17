@@ -1,5 +1,7 @@
 # GPU AI Playground
 
+![gpu1](images/fpu1.png "gpu1")
+
 ## Overview
 
 GPU AI Playground is a Terraform-based lab environment designed to easily deploy a NVIDIA GPU-enabled EC2 instance on AWS for experimenting with AI models and applications. I've been using it in research for my own Cyber Security use cases but it can be used for any LLM self-hosting inference lab purpose you can imagine.  This template sets up all necessary cloud infrastructure and bootstraps the GPU instance with required software (i.e., NVIDIA drivers, Docker, AI frameworks) via a user-data script. You can easily adapt it to scale up or down on the GPU instance, and adapt the cloud-init user_data script for any customizations.  On launch, the instance is auto-configured (via cloud-init user-data) with GPU drivers, workflow automation tools (n8n), and AI management frameworks (Ollama, Open WebUI). The GPU AI Playground is ideal for those who want to quickly spin up a personal AI sandbox in the cloud without manually installing CUDA, frameworks, and tooling.  
