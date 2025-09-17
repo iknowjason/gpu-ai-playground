@@ -1,6 +1,6 @@
 # GPU AI Playground
 
-![gpu1](images/fpu1.png "gpu1")
+![gpu1](images/gpu1.png "gpu1")
 
 ## Overview
 
